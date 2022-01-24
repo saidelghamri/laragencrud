@@ -1,0 +1,17 @@
+    /**
+     * @test
+     */
+    public function a_user_cannot_delete_others_@@modelMethodName@@(): void
+    {
+        $user = $this->createUser();
+        $secondUser = $this->createUser();
+        @@parentVariable@@@@modelVariable@@ = @@modelShortName@@::factory()->for($user)->create();
+
+        @@apiActingAs@@
+        $response = $this->@@webActingAs@@deleteJson(@@route@@);
+        $response->assertForbidden();
+
+        $this->assertDatabaseHas('@@table@@', [
+            'id' => @@modelVariable@@->id,
+        ]);
+    }

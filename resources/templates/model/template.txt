@@ -1,0 +1,31 @@
+<?php
+namespace @@namespace@@;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+@@importNamespaces@@
+/**
+   @@propertyDefiner@@
+   @@methodDefiner@@
+ */
+class @@modelName@@ extends Model 
+{
+    @@traits@@
+
+    @@constants@@
+
+    /**
+    * Database table name
+    */
+    protected $table = '@@tableName@@';
+@@guarded@@
+@@fillable@@
+@@searchable@@
+@@casts@@
+@@dateColumns@@
+@@relationShips@@
+@@mutators@@
+@@accessors@@
+@@scopes@@
+}

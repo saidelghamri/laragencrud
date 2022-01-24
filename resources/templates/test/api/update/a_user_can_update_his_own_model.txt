@@ -1,0 +1,22 @@
+
+    /**
+     * @test
+     */
+    public function a_user_can_update_his_own_@@modelMethodName@@(): void
+    {
+        @@fake@@$user = $this->createUser();
+
+        @@parentVariable@@@@modelVariable@@ = @@modelShortName@@::factory()->for($user)->create();
+
+        $new@@modelShortName@@ = @@modelShortName@@::factory()->make();
+        @@apiActingAs@@
+        $response = $this->@@webActingAs@@patchJson(@@route@@, [
+             @@data@@
+         ]);
+
+        $response->assertOk();
+
+        $this->assertDatabaseHas('@@table@@', [
+           @@data@@
+        ]);@@fake@@
+    }

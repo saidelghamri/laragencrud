@@ -1,0 +1,17 @@
+    /**
+     * @test
+     */
+    public function a_guest_cannot_delete_the_@@modelMethodName@@_of_a_user(): void
+    {
+        $user = $this->createUser();
+
+        @@parentVariable@@@@modelVariable@@ = @@modelShortName@@::factory()->for($user)->create();
+
+        $response = $this->deleteJson(@@route@@);
+
+        $this->assertDatabaseHas('@@table@@', [
+            'id' => @@modelVariable@@->id,
+        ]);
+
+        $response->assertUnauthorized();
+    }
