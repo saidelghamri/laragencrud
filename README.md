@@ -1,0 +1,2 @@
+# laragencrud
+ Laravel Crud Generator
