@@ -1,8 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Tuhin
+ * User: Said
  * Date: 9/10/2017
+ * Refactor: 01/01/2022
  * Time: 5:37 PM.
  */
 
@@ -62,7 +63,7 @@ class Controller extends Command
       {model : Name of the Eloquent Model.}
       {name? : Custom Controller Name}
       {--o|only= : If you want to create partial resourceful controller. e.g. --only=index,show}
-      {--api : whether its an API controller or now}
+      {--api : whether its an API controller or no}
       {--p|parent= : Generate a nested resource controller class. Give the Parent Eloquent Model name. e.g --parent=Post}
       {--w|with= : Create Custom Request Classes or Policy along with Newly created Controller. e.g --with=request,policy }';
 
@@ -84,7 +85,7 @@ class Controller extends Command
             $this->checkModelExists();
 
             $name = $this->argument('name');
-            $api = $this->option('api');
+            $api  = $this->option('api');
             $with = $this->option('with');
 
             $withArr = !empty($with) ? explode(',', $with) : [];

@@ -87,7 +87,8 @@ class Controller implements Crud
         $this->model = $model;
         $this->resolveControllerFileName($controllerFileName);
 
-        $ns = ! empty($api) ? config('laracrud.controller.apiNamespace') : config('laracrud.controller.namespace');
+//        $ns = ! empty($api) ? config('laracrud.controller.apiNamespace') : config('laracrud.controller.namespace');
+        $ns = ! empty($api) ? config('laracrud.controller.namespace') : config('laracrud.controller.namespace');
         $this->namespace = trim($this->getFullNS($ns), '/') . $this->subNameSpace;
         $this->controllerRepository = $controllerRepository;
     }
@@ -109,6 +110,8 @@ class Controller implements Crud
             'importNameSpace' => $this->makeNamespaceImportString(),
             'modelVariable' => lcfirst($modelShortName),
             'model' => $modelShortName,
+            'repository'=> $modelShortName .'Repository',
+            'repositoryVariable'=> lcfirst($modelShortName) .'Repository',
         ]);
 
         return $tempMan->get();

@@ -12,7 +12,7 @@ use LaraCrud\Helpers\TemplateManager;
  * Create Routes based on controller method and its parameters
  * We will use ReflectionClass to inspect Controller and its method to generate routes based on it.
  *
- * @author Tuhin
+ * @author Said
  */
 class RouteCrud implements Crud
 {

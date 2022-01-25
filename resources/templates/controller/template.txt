@@ -10,7 +10,7 @@ use @@fullmodelName@@;
 /**
  * Description of @@controllerName@@
  *
- * @author Tuhin Bepari <digitaldreams40@gmail.com>
+ * @author Said El-Ghamri <saidelghamri010@gmail.com>
  */
 
 class @@controllerName@@ extends Controller

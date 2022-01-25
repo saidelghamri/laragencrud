@@ -7,7 +7,7 @@ use Intervention\Image\Facades\Image as ImageLib;
 use Storage;
 
 /**
- * Tuhin Bepari <digitaldreams40@gmail.com>.
+ * Said El-Ghamri <saidelghamri010@gmail.com>.
  */
 trait Image
 {

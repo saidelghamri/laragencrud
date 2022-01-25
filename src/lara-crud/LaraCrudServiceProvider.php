@@ -26,7 +26,7 @@ use LaraCrud\Console\View;
 /**
  * Description of LaraCrudServiceProvider.
  *
- * @author Tuhin
+ * @author Said
  */
 class LaraCrudServiceProvider extends ServiceProvider
 {

@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 /**
  * Description of MigrationCrud.
  *
- * @author Tuhin
+ * @author Said
  */
 class MigrationCrud implements Crud
 {

@@ -1,6 +1,6 @@
 <?php
 /**
- * Tuhin Bepari <digitaldreams40@gmail.com>.
+ * Said El-Ghamri <saidelghamri010@gmail.com>.
  */
 
 namespace LaraCrud\View\Partial;

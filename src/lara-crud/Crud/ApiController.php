@@ -46,7 +46,7 @@ class ApiController extends Controller
             $requestClass = $this->requestFolderNs.'\\'.$requestClass;
         }
 
-        if (is_subclass_of($requestClass, \Dingo\Api\Http\FormRequest::class)) {
+        if (is_subclass_of($requestClass, Illuminate\Foundation\Http\FormRequest::class)) {
             $request = new $requestClass();
             $rules = $request->rules();
         }

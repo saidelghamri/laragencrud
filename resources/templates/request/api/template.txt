@@ -2,8 +2,8 @@
 
 namespace @@namespace@@;
 
-use Dingo\Api\Http\FormRequest;
-
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 class @@requestClassName@@ extends FormRequest 
 {
 

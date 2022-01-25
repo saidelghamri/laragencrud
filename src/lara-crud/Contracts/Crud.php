@@ -3,7 +3,7 @@
 namespace LaraCrud\Contracts;
 
 /**
- * Tuhin Bepari <digitaldreams40@gmail.com>.
+ * Said El-Ghamri <saidelghamri010@gmail.com>.
  */
 interface Crud
 {

@@ -11,7 +11,7 @@ use LaraCrud\View\Partial\Panel;
 use LaraCrud\View\Partial\Table as TableView;
 
 /**
- * Tuhin Bepari <digitaldreams40@gmail.com>.
+ * Said El-Ghamri <saidelghamri010@gmail.com>.
  */
 class Index extends Page
 {
