@@ -38,7 +38,7 @@ abstract class UpdateMethod extends ControllerMethod
     {
         $variable = $this->getModelVariableName();
 
-        return '$'. $variable. ' = '. '$this->'.$variable. 'Repository->update($'.$variable.','.'$request->getFilteredAttributes()));' . PHP_EOL;
+        return '$'. $variable. ' = '. '$this->'.$variable. 'Repository->update($'.$variable.','.'$request->getFilteredAttributes());' . PHP_EOL;
     }
 
 
