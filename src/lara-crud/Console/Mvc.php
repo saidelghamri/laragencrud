@@ -19,7 +19,7 @@ class Mvc extends Command
      *
      * @var string
      */
-    protected $signature = 'laracrud:mvc {table : MySQl Table name} {--api : Whether its an API MVC}';
+    protected $signature = 'omnevo:mvc {table : MySQl Table name} {--api : Whether its an API MVC}';
 
     /**
      * The console command description.
