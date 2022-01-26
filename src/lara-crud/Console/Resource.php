@@ -16,7 +16,7 @@ class Resource extends Command
      *
      * @var string
      */
-    protected $signature = 'laracrud:resource
+    protected $signature = 'omnevo:resource
         {model : Eloquent Model name}
         {name? : Custom name of your Resource. e.g. PostResource }
         {--c|createAll : create related Resource classes}';

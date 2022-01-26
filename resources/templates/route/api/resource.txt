@@ -1,2 +1,2 @@
-$api->resource('@@table@@','@@controller@@');
+$router->resource('@@table@@',@@controller@@::class)->name('@@table@@');
 

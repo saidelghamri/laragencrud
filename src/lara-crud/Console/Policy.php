@@ -14,7 +14,7 @@ class Policy extends Command
      *
      * @var string
      */
-    protected $signature = 'laracrud:policy
+    protected $signature = 'omnevo:policy
         {model  : Eloquent model name}
         {--c|controller= : Create policy for all of the public method of this controller. e.g. --controller=PostController}
         {--name= : Custom Name of the Policy. e.g. --name=MyPostPolicy}';

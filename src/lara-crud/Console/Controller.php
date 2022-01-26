@@ -59,7 +59,7 @@ class Controller extends Command
      *
      * @var string
      */
-    protected $signature = 'laracrud:controller
+    protected $signature = 'omnevo:controller
       {model : Name of the Eloquent Model.}
       {name? : Custom Controller Name}
       {--o|only= : If you want to create partial resourceful controller. e.g. --only=index,show}

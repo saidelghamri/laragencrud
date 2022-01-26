@@ -14,7 +14,7 @@ class Route extends Command
      *
      * @var string
      */
-    protected $signature = 'laracrud:route
+    protected $signature = 'omnevo:route
         {controller : Controller name}
         {--api : Whether its an API controller}';
 
@@ -46,7 +46,8 @@ class Route extends Command
             $controllers = [];
             $controller = $this->argument('controller');
             $api = $this->option('api');
-            $namespace = true == $api ? config('laracrud.controller.apiNamespace') : config('laracrud.controller.namespace');
+//            $namespace = true == $api ? config('laracrud.controller.apiNamespace') : config('laracrud.controller.namespace');
+            $namespace = config('laracrud.controller.namespace');
             $namespace = $this->getFullNS($namespace);
 
             if ('all' == $controller) {

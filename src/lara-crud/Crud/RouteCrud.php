@@ -90,7 +90,8 @@ class RouteCrud implements Crud
         $this->fetchControllerMethods();
 
         $this->template = !empty($api) ? 'api' : 'web';
-        $this->namespace = true == $api ? config('laracrud.controller.apiNamespace') : config('laracrud.controller.namespace');
+//        $this->namespace = true == $api ? config('laracrud.controller.apiNamespace') : config('laracrud.controller.namespace');
+        $this->namespace = config('laracrud.controller.namespace');
         $this->namespace = rtrim($this->getFullNS($this->namespace), '\\') . '\\';
     }
 

@@ -14,7 +14,7 @@ class Factory extends Command
      *
      * @var string
      */
-    protected $signature = 'laracrud:factory 
+    protected $signature = 'omnevo:factory 
     {model : Name of the Eloquent Model}';
 
     /**

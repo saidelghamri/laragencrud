@@ -16,7 +16,7 @@ class Request extends Command
      *
      * @var string
      */
-    protected $signature = 'laracrud:request
+    protected $signature = 'omnevo:request
         {model : Eloquent Model name}
         {name? : Custom name of your Request. e.g. MyPostRequest }
         {--c|controller= : Create individual Request class for each public method of this controller.}

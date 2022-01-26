@@ -16,7 +16,7 @@ class Test extends Command
      *
      * @var string
      */
-    protected $signature = 'laracrud:test
+    protected $signature = 'omnevo:test
         {controller : Controller Name}
         {model : Model name}
         {--f|name= : Test Class Name}
@@ -59,7 +59,8 @@ class Test extends Command
         $api = $this->option('api');
 
         if (! class_exists($controller)) {
-            $namespace = true == $api ? config('laracrud.controller.apiNamespace') : config('laracrud.controller.namespace');
+//            $namespace = true == $api ? config('laracrud.controller.apiNamespace') : config('laracrud.controller.namespace');
+            $namespace = config('laracrud.controller.namespace');
             $namespace = $this->getFullNS($namespace);
             $controller = rtrim($namespace, '\\') . '\\' . $controller;
         }
