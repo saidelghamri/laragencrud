@@ -5,6 +5,7 @@
      */
     public function @@methodName@@(@@parameters@@)
     {
-         @@authorization@@ @@body@@
+         @@authorization@@
+         @@body@@
         return @@response@@;
     }

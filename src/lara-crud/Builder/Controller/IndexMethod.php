@@ -46,6 +46,16 @@ abstract class IndexMethod extends ControllerMethod
         return $body . ';';
     }
 
+
+    /**
+     * This body for Repository pattern
+     * @return string
+     */
+    public function getRepositoryBody(): string
+    {
+        return '$this->'.$this->getModelVariableName(). 'Repository->get();' . PHP_EOL;
+    }
+
     public function phpDocComment(): string
     {
         return sprintf('Display a listing of %s', $this->getModelShortName());

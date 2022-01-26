@@ -206,6 +206,11 @@ abstract class ControllerMethod
         return '';
     }
 
+    public function getRepositoryBody(): string
+    {
+        return '';
+    }
+
     /**
      * This is a helper function which will set Parent variable name and its method argument.
      *
@@ -219,7 +224,6 @@ abstract class ControllerMethod
             $this->setVariable($this->getParentVariableName(), '$' . $this->getParentVariableName())
                 ->setParameter($this->getParentShortName(), '$' . $this->getParentVariableName());
         }
-
         return $this;
     }
 
@@ -286,6 +290,9 @@ abstract class ControllerMethod
         if ($this->isCollection()) {
             return "$resourceName::" . 'collection($builder->paginate(10))';
         }
+
         return 'new ' . $resourceName . '($' . $this->getModelVariableName() . ')';
+
+//        return 'new ' . $resourceName . '($' . $this->getModelRepository() . ')';
     }
 }

@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use @@fullmodelName@@;
 @@importNameSpace@@
 
+use App\Repositories\@@repository@@;
+
 /**
  * Description of @@controllerName@@
  *
@@ -15,5 +17,20 @@ use @@fullmodelName@@;
 
 class @@controllerName@@ extends Controller
 {
+     /**
+      * @var \App\Repositories\@@repository@@
+      */
+     public @@repository@@  $@@repositoryVariable@@;
+
+     /**
+      * @@controllerName@@ constructor.
+      *
+      * @param \App\Repositories\@@repository@@  $@@repositoryVariable@@
+      */
+     public function __construct(@@repository@@ $@@repositoryVariable@@)
+     {
+         $this->@@repositoryVariable@@ = $@@repositoryVariable@@;
+     }
+
     @@methods@@
 }

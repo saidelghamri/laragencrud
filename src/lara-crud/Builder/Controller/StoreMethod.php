@@ -37,6 +37,15 @@ abstract class StoreMethod extends ControllerMethod
         return $body;
     }
 
+    /**
+     * This body for Repository pattern
+     * @return string
+     */
+    public function getRepositoryBody(): string
+    {
+        $variable = $this->getModelVariableName();
+        return '$'. $variable. ' = '. '$this->'.$this->getModelVariableName(). 'Repository->save($request->getFilteredAttributes());' . PHP_EOL;
+    }
 
     public function phpDocComment(): string
     {

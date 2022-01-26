@@ -30,6 +30,18 @@ abstract class UpdateMethod extends ControllerMethod
     }
 
 
+    /**
+     * This body for Repository pattern
+     * @return string
+     */
+    public function getRepositoryBody(): string
+    {
+        $variable = $this->getModelVariableName();
+
+        return '$'. $variable. ' = '. '$this->'.$variable. 'Repository->update($'.$variable.','.'$request->getFilteredAttributes()));' . PHP_EOL;
+    }
+
+
     public function phpDocComment(): string
     {
         return sprintf('Update the specified %s in storage.', $this->getModelShortName());

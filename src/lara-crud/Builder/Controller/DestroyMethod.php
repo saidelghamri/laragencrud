@@ -28,6 +28,16 @@ abstract class DestroyMethod extends ControllerMethod
     }
 
     /**
+     * This body for Repository pattern
+     * @return string
+     */
+    public function getRepositoryBody(): string
+    {
+        $variable = $this->getModelVariableName();
+        return '$this->'.$variable. 'Repository->delete($'.$variable.');' . PHP_EOL;
+    }
+
+    /**
      * Redirect route Parameter.
      *
      * @return array

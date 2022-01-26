@@ -50,6 +50,16 @@ trait ModelShortNameAndVariablesTrait
     }
 
     /**
+     * Get Model Repository without namespace.
+     *
+     * @return string
+     */
+    protected function getModelRepository(): string
+    {
+        return $this->getModelVariableName().'Repository';
+    }
+
+    /**
      * @return string
      */
     public function getModelVariableName(): string

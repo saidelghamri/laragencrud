@@ -10,7 +10,8 @@ trait ApiMethodHelper
     {
         return (new TemplateManager('controller/api/array.txt', [
             'parameters' => $this->buildParameters(),
-            'body' => $this->getBody(),
+//            'body' => $this->getBody(),
+            'body' => $this->getRepositoryBody(),
             'methodName' => $this->getMethodName(),
             'PHPDocComment' => $this->phpDocComment(),
             'authorization' => $this->getAuthorization(),
@@ -26,7 +27,8 @@ trait ApiMethodHelper
     {
         return (new TemplateManager('controller/api/resource.txt', [
             'parameters' => $this->buildParameters(),
-            'body' => $this->getBody(),
+//            'body' => $this->getBody(),
+            'body' => $this->getRepositoryBody(),
             'methodName' => $this->getMethodName(),
             'PHPDocComment' => $this->phpDocComment(),
             'authorization' => $this->getAuthorization(),

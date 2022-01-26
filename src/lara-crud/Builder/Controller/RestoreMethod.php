@@ -30,6 +30,19 @@ abstract class RestoreMethod extends ControllerMethod
         return $body;
     }
 
+    /**
+     * @return string
+     */
+    public function getRepositoryBody(): string
+    {
+        $variable = '$' . $this->getModelVariableName();
+        $body = $variable . ' = ' . $this->getModelShortName() . '::withTrashed()->where(\'' . $this->model->getRouteKeyName() . '\',' . $variable . ')->firstOrFail();' . PHP_EOL;
+
+        $body .= "\t\t" . $variable . '->restore();' . PHP_EOL;
+
+        return $body;
+    }
+
     public function phpDocComment(): string
     {
         return sprintf('Restore a previously deleted %s .', $this->getModelShortName());

@@ -94,6 +94,7 @@ class Request implements Crud
             'namespace' => $this->namespace,
             'requestClassName' => $this->modelName,
             'authorization' => $this->authorization,
+            'attributes'=> implode("',\n'", $this->model->getFillable()),
             'rules' => implode("\n", $this->makeRules()),
         ]);
 

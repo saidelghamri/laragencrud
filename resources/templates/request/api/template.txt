@@ -29,16 +29,16 @@ class @@requestClassName@@ extends FormRequest
         ];
     }
 
-    /**
-    * Get the error messages for the defined validation rules.
-    *
-    * @return array
-    */
-    public function messages()
+    public function getFilteredAttributes(): array
     {
-        return [
-     
-        ];
+        return array_merge($this->only(
+         [
+         '@@attributes@@'
+         ]
+        ), [
+            //'user_id' => auth()->user()->id,
+        ]);
     }
+
 
 }
