@@ -167,7 +167,7 @@ return [
         /*
          * Repository Parent Namespace for web
          */
-        'namespace' => 'Http\Repositories',
+        'namespace' => 'App\Repositories',
 
         /*
          * After every request class name this world will be added. For example, User will be UserController
