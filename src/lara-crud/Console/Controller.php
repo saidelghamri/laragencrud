@@ -107,7 +107,7 @@ class Controller extends Command
             $this->info(sprintf('%s  class successfully created', $controllerCrud->getFullName()));
 
             if (in_array('policy', $withArr)) {
-                $policyCrud = new Policy($this->model, $controllerCrud->getFullName());
+                $policyCrud = new Policy(get_class($this->model), $controllerCrud->getFullName());
                 $policyCrud->save();
                 $this->info('Policy class created successfully');
             }

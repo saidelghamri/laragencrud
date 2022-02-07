@@ -5,7 +5,7 @@ namespace @@namespace@@;
 use @@modelFullClass@@;
 use @@userClass@@;
 use Illuminate\Auth\Access\HandlesAuthorization;
-
+use Illuminate\Auth\Access\Response;
 class @@className@@
 {
     use HandlesAuthorization;

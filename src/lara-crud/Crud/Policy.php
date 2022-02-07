@@ -84,6 +84,7 @@ class Policy implements Crud
      */
     public function __construct(string $model, ?string $controller = null, ?string $name = null, array $only = [])
     {
+
         $this->modelFullClass = $model;
         $this->modelRelationReader = (new ModelRelationReader(new $this->modelFullClass()))->read();
         $this->shortModelName = $this->modelRelationReader->getShortName();
@@ -191,7 +192,9 @@ class Policy implements Crud
         if ($this->modelRelationReader->hasOwner()) {
             $modelVar = '$' . lcfirst($this->shortModelName . '->' . $this->modelRelationReader->getOwnerForeignKey());
 
-            return '$user->' . $this->modelRelationReader->getOwnerLocalKey() . '===' . $modelVar;
+//            return '$user->' . $this->modelRelationReader->getOwnerLocalKey() . '===' . $modelVar;
+            return '$user->' . $this->modelRelationReader->getOwnerLocalKey() . '===' . $modelVar ." ? Response::allow() : Response::deny(trans('exception.".$this->shortModelName.".must_be_owner_of_".$this->shortModelName."'))";
+
         }
 
         return 'true';
