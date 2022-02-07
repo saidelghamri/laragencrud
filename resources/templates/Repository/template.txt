@@ -18,9 +18,9 @@ class @@repository@@ extends Repository
     /**
      * UserRepository constructor.
      *
-     * @param \App\Models\User $model
+     * @param \App\Models\@@model@@ $@@modelVariable@@
      */
-    public function __construct(model $model)
+    public function __construct(@@model@@ $model)
     {
         parent::__construct($model);
     }

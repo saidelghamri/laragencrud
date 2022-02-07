@@ -104,7 +104,6 @@ class Controller extends Command
             $controllerCrud = new RepositoryCrud($controllerRepository, $this->model);
             $controllerCrud->save();
 
-            dd('created');
             $this->info(sprintf('%s  class successfully created', $controllerCrud->getFullName()));
 
             if (in_array('policy', $withArr)) {
