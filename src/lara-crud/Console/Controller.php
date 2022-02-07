@@ -101,8 +101,8 @@ class Controller extends Command
 
             //createModelRepository
 
-            $controllerCrud = new RepositoryCrud($controllerRepository, $this->model);
-            $controllerCrud->save();
+            $repositoryCrud = new RepositoryCrud($controllerRepository, $this->model);
+            $repositoryCrud->save();
 
             $this->info(sprintf('%s  class successfully created', $controllerCrud->getFullName()));
 
