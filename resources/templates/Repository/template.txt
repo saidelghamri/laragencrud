@@ -1,0 +1,28 @@
+<?php
+
+namespace @@namespace@@;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use @@fullmodelName@@;
+@@importNameSpace@@
+
+/**
+ * Description of @@controllerName@@
+ *
+ * @author Said El-Ghamri <saidelghamri010@gmail.com>
+ */
+
+class @@repository@@ extends Repository
+{
+    /**
+     * UserRepository constructor.
+     *
+     * @param \App\Models\User $model
+     */
+    public function __construct(model $model)
+    {
+        parent::__construct($model);
+    }
+
+}

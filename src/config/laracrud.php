@@ -163,6 +163,17 @@ return [
          */
         'classSuffix' => 'Controller',
     ],
+    'repository' => [
+        /*
+         * Repository Parent Namespace for web
+         */
+        'namespace' => 'Http\Repositories',
+
+        /*
+         * After every request class name this world will be added. For example, User will be UserController
+         */
+        'classSuffix' => 'Repository',
+    ],
     'request' => [
         /*
          *  Request Parent Namespace for web

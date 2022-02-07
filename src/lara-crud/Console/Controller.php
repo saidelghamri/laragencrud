@@ -13,6 +13,7 @@ use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Log;
 use LaraCrud\Crud\Controller as ControllerCrud;
+use LaraCrud\Crud\ModelRepository as RepositoryCrud;
 use LaraCrud\Crud\Policy;
 use LaraCrud\Crud\RequestResource as RequestResourceCrud;
 use LaraCrud\Helpers\Helper;
@@ -97,6 +98,13 @@ class Controller extends Command
 
             $controllerCrud = new ControllerCrud($controllerRepository, $this->model, $name, $api);
             $controllerCrud->save();
+
+            //createModelRepository
+
+            $controllerCrud = new RepositoryCrud($controllerRepository, $this->model);
+            $controllerCrud->save();
+
+            dd('created');
             $this->info(sprintf('%s  class successfully created', $controllerCrud->getFullName()));
 
             if (in_array('policy', $withArr)) {
