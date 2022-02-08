@@ -60,12 +60,13 @@ class TestRepository extends AbstractControllerRepository
      */
     public function addMethods(string $controller): self
     {
+
         $availableMethods = $this->isApi ? Configuration::$testApiMethods : [];
         $cr = new ControllerReader($controller);
         $methods = $cr->getMethods();
         $routes = $cr->getRoutes();
-
         $insertAbleMethods = array_intersect_key($availableMethods, $routes);
+
         foreach ($insertAbleMethods as $key => $methodName) {
             $method = new $methodName($methods[$key], $routes[$key]);
             $method->setModel($this->model);
@@ -73,10 +74,15 @@ class TestRepository extends AbstractControllerRepository
                 $method->setParent($this->parentModel);
             }
             $this->addMethod($method);
+
             unset($routes[$key]);
         }
 
+
         foreach ($routes as $key => $route) {
+            //below $key line code needs to be changed i worte it just to auick fix an issue
+            $key = ($key == 'create') ? 'store' :(($key == 'edit') ? 'update' : $key);
+
             $method = new DefaultMethod($methods[$key], $route);
             $method->setModel($this->model);
             if ($this->parentModel) {
@@ -84,6 +90,7 @@ class TestRepository extends AbstractControllerRepository
             }
             $this->addMethod($method->init());
         }
+
 
         return $this;
     }

@@ -1,2 +1,2 @@
-$router->resource('@@table@@',@@controller@@::class)->name('@@table@@');
+$router->resource('@@table@@',@@controller@@::class);
 

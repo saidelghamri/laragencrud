@@ -96,7 +96,6 @@ class Test extends Command
         }
 
         $this->fileName = empty($fileName) ? (new \ReflectionClass($model))->getShortName() . 'Test' : $fileName;
-
         return new TestRepository($controller, new $model(), $parent, $api);
     }
 }

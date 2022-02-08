@@ -10,4 +10,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class @@className@@ extends TestCase
 {
 @@methods@@
+
+
 }
