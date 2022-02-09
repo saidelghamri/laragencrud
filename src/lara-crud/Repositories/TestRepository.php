@@ -38,6 +38,7 @@ class TestRepository extends AbstractControllerRepository
         $this->isApi = $isApi;
         $this->parentModel = $parentModel;
         $this->addMethods($controller);
+
     }
 
     /**
@@ -47,6 +48,7 @@ class TestRepository extends AbstractControllerRepository
      */
     public function addMethod(ControllerMethod $method): self
     {
+
         $this->methods[] = $method;
 
         return $this;

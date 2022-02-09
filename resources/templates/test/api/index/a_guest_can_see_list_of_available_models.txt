@@ -12,3 +12,16 @@
             'data' => [],
         ]);
     }
+
+    /**
+     * @test
+     */
+    public function a_guest_cannot_see_list_of_available_@@modelMethodName@@(): void
+    {
+        $user = $this->createUser();
+        @@parentVariable@@@@modelVariable@@s = @@modelShortName@@::factory()->count(5)->for($user)->create();
+
+        $response = $this->getJson(@@route@@);
+        $response->assertUnauthorized();
+    }
+
