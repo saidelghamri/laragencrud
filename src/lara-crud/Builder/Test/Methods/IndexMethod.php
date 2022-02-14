@@ -11,6 +11,10 @@ class IndexMethod extends ControllerMethod
 
     public function before()
     {
+        $this->isAuthRequired();
+
+//        dd('índexMethod Reached');
+
         if ($this->isAuthRequired()) {
             $this->testMethods[] = (new TemplateManager('test/api/index/a_user_can_see_list_of_models_that_he_created.txt', $this->getGlobalVariables()));
             $this->testMethods[] = (new TemplateManager('test/api/index/a_guest_cannot_see_list_of_models.txt', $this->getGlobalVariables()));
