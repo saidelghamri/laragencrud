@@ -9,7 +9,7 @@ use LaraCrud\Helpers\TemplateManager;
 use LaraCrud\View\Page;
 
 /**
- * Said El-Ghamri <saidelghamri010@gmail.com>.
+ * Omnevo TangerTeam
  */
 class Table extends Page
 {

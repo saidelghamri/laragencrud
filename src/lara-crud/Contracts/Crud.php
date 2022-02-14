@@ -3,7 +3,7 @@
 namespace LaraCrud\Contracts;
 
 /**
- * Said El-Ghamri <saidelghamri010@gmail.com>.
+ * Omnevo TangerTeam
  */
 interface Crud
 {

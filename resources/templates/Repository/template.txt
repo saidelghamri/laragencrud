@@ -8,7 +8,7 @@ use @@fullmodelName@@;
 /**
  * Description of @@repository@@
  *
- * @author Said El-Ghamri <saidelghamri010@gmail.com>
+ * @author Omnevo TangerTeam
  */
 
 class @@repository@@ extends Repository

@@ -12,7 +12,7 @@ use App\Repositories\@@repository@@;
 /**
  * Description of @@controllerName@@
  *
- * @author Said El-Ghamri <saidelghamri010@gmail.com>
+ * @author Omnevo TangerTeam
  */
 
 class @@controllerName@@ extends Controller

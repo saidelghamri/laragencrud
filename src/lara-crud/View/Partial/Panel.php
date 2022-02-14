@@ -1,6 +1,6 @@
 <?php
 /**
- * Said El-Ghamri <saidelghamri010@gmail.com>.
+ * Omnevo TangerTeam
  */
 
 namespace LaraCrud\View\Partial;

@@ -10,7 +10,7 @@ use Tests\TestCase;
 /**
  * Description of @@className@@
  *
- * @author Said El-Ghamri <saidelghamri010@gmail.com>
+ * @author Omnevo TangerTeam
  */
 class @@className@@ extends TestCase
 {

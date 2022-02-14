@@ -3,7 +3,7 @@
 namespace LaraCrud\View;
 
 /*
- * Said El-Ghamri <saidelghamri010@gmail.com>
+ * Omnevo TangerTeam
  */
 
 use DbReader\Table;

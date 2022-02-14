@@ -79,7 +79,6 @@ abstract class ControllerMethod extends ControllerMethodReader
     protected function isAuthRequired(): bool
     {
         $auth = array_intersect($this->authMiddleware, $this->route->gatherMiddleware());
-
         if (count($auth) > 0) {
             if (in_array('auth', $auth)) {
                 $this->isWebAuth = true;
